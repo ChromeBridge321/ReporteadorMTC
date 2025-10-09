@@ -1,6 +1,6 @@
 # PASOS PARA CONFIGURAR ENTORNO DE DESARROLLO PHP 7.1
 
-1. Primero instalar el paquete de XAMPP "https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.1.1/xampp-win32-7.1.1-0-VC14-installer.exe/download". Una vez que se instale, desmarcar la casilla de "ejecutar xampp".
+1. Primero instalar el paquete de XAMPP entrando al siguiente enlace, esperar unos segundos a que la descarga comience automaticamente "https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.1.1/xampp-win32-7.1.1-0-VC14-installer.exe/download". Una vez que se instale, desmarcar la casilla de "ejecutar xampp".
 
 2. Una vez instalado XAMPP, copiar los archivos "php_pdo_sqlsrv.dll" y "php_sqlsrv.dll" que se encuentrar en la carpeta drivers del proyecto y dirigirse a la carpeta de XAMPP `C:\xampp\php\ext` y pegar aquí estos dos archivos.
 
