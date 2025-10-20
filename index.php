@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+require __DIR__ . '/config/cors.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+$request = $_SERVER['REQUEST_URI'];
+$method  = $_SERVER['REQUEST_METHOD'];
 
-<body>
-    <h1>Navegación</h1>
-    <ul>
-        <li><a href="config/conexion.php">Conexión</a></li>
-        <li><a href="index.php">Inicio</a></li>
-        <li><a href="api/historicosValoresTags.php">Historicos</a></li>
-    </ul>
-</body>
+$request = str_replace("/Reporteador_MTC", "", $request);
 
-</html>
+if (preg_match("/^\/api\/historicos\/?$/", $request)) {
+    switch ($method) {
+        case 'GET':
+            require __DIR__ . '/api/historicos/historicosValoresTags.php';
+            break;
+        default:
+            http_response_code(405);
+            echo json_encode(["message" => "Método no permitido"]);
+    }
+} else {
+    http_response_code(404);
+    echo json_encode(["message" => "Ruta no encontrada"]);
+}
