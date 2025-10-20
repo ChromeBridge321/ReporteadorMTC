@@ -13,6 +13,6 @@ extension=php_pdo_sqlsrv.dll
 ```
 5. Ahora deberás dirigirte a la siguiente ruta `C:\xampp\htdocs` y aquí deberás clonar el repositorio. Una vez hecho esto, inicia el servidor Apache de XAMPP y accede a la aplicación para probar que se pueda acceder a la base de datos.
    
-   **URL del proyecto:** http://localhost/Reporteador_MTC/index.php
+   **URL del proyecto:** http://localhost/ReporteadorMTC/index.php
 
 6. Accede a "Históricos" y verifica que el endpoint devuelva una respuesta de tipo JSON. Listo, tendrás ya el proyecto correctamente configurado.

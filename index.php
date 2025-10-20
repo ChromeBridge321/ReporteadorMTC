@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/config/cors.php';
+require __DIR__ . '/cors/cors.php';
 
 $request = $_SERVER['REQUEST_URI'];
 $method  = $_SERVER['REQUEST_METHOD'];
