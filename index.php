@@ -20,6 +20,9 @@ if (preg_match("/^\/api\/historicos\/?$/", $request)) {
         case 'GET':
             require __DIR__ . '/api/pozos/consultarPozos.php';
             break;
+        case 'GET':
+            require __DIR__ . '/api/pozos/consultarTodosPozos.php';
+            break;
         default:
             http_response_code(405);
             echo json_encode(["message" => "Método no permitido"]);

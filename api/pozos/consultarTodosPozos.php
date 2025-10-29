@@ -4,22 +4,7 @@ header('Content-Type: application/json; charset=utf-8');
 require_once __DIR__ . '/../../config/conexion.php';
 
 // Consulta segura
-$sql = "
-	select IdPozo, NombrePozo from [t_Instalacion.Pozos]
-	where
-	NombrePozo not like '%OCUPADO%'
-	and NombrePozo not like '%disponible'
-	and NombrePozo != 'dis'
-	and NombrePozo != '´dis'
-	and NombrePozo != 'des'
-	and NombrePozo != 'disp'
-	and NombrePozo != 'p'
-	and NombrePozo != 'di'
-	and NombrePozo != 'dip'
-	and NombrePozo != 'd'
-	and NombrePozo != ''
-	order by NombrePozo desc
-";
+$sql = "select IdPozo, NombrePozo from [t_Instalacion.Pozos]";
 
 // Ejecutar con parámetros
 $stmt = sqlsrv_query($conn, $sql, []);
