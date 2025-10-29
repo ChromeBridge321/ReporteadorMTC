@@ -15,6 +15,15 @@ if (preg_match("/^\/api\/historicos\/?$/", $request)) {
             http_response_code(405);
             echo json_encode(["message" => "Método no permitido"]);
     }
+} elseif (preg_match("/^\/api\/pozos\/?$/", $request)) {
+    switch ($method) {
+        case 'GET':
+            require __DIR__ . '/api/pozos/consultarPozos.php';
+            break;
+        default:
+            http_response_code(405);
+            echo json_encode(["message" => "Método no permitido"]);
+    }
 } else {
     http_response_code(404);
     echo json_encode(["message" => "Ruta no encontrada"]);
